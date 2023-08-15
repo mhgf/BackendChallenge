@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BackendChallenge.core.Repository
 {
-    internal interface UserRepository: BaseRepository<User>
+    internal interface IUserRepository: IBaseRepository<User>
     {
         Task<User> FindByDocumentAsync(string document);
     }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BackendChallenge.core.Repositories
 {
-    public interface BaseRepository<T> where T : BaseEntity
+    public interface IBaseRepository<T> where T : BaseEntity
     {
-        Task<T> FindAllAsync();
+        Task<IEnumerable<T>> FindAllAsync();
         Task<T> FindByIdAsync(Guid id);
 
         Task<T> CreateAsync(T entity);
