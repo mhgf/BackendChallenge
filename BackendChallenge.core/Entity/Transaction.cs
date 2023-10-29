@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackendChallenge.core.Entity.Validators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace BackendChallenge.core.Entity
             SenderId = senderId;
             ResiverId = resiverId;
             Amount = amount;
+
+            Validate(this, new TransactionValidator());
         }
 
         public  static Transaction Create(Guid senderId, Guid resiverId, decimal amount) =>  new Transaction(senderId, resiverId, amount);

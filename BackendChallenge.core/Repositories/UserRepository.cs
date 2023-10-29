@@ -1,15 +1,9 @@
 ﻿using BackendChallenge.core.Entity;
-using BackendChallenge.core.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BackendChallenge.core.Repository
+namespace BackendChallenge.core.Repositories
 {
-    internal interface IUserRepository: IBaseRepository<User>
+    public interface IUserRepository: IBaseRepository<User>
     {
-        Task<User> FindByDocumentAsync(string document);
+        Task<User?> FindByDocumentAsync(string document);
     }
 }
